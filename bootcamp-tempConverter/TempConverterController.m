@@ -41,6 +41,15 @@
     [self updateValues];
 }
 
+- (IBAction)resign:(id)sender {
+    [self.inputVal resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void) updateValues{
     NSArray * degLbl = @[@"℃", @"℉"];
 

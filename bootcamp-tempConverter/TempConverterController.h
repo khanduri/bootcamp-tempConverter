@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *tempVal;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *degControl;
 - (IBAction)onChange:(id)sender;
+- (IBAction)resign:(id)sender;
 
 @end
