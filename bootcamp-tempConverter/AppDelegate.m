@@ -19,8 +19,10 @@
     [self.window makeKeyAndVisible];
     
     TempConverterController * vc = [[TempConverterController alloc] init];
+    UINavigationController * navVC = [[UINavigationController alloc] initWithRootViewController:vc];
     
-    self.window.rootViewController = vc;
+    
+    self.window.rootViewController = navVC;
 
     return YES;
 }

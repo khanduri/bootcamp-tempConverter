@@ -18,6 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.title = @"Temperature";
         
     }
     return self;
@@ -41,22 +42,18 @@
 }
 
 - (void) updateValues{
-    NSString * pickedMetric = @"Celcius";
-    NSString * invPickedMetric = @"Fahrenheit";
-    
+    NSArray * degLbl = @[@"℃", @"℉"];
+
     float inputVal = [self.inputVal.text floatValue];
     float calVal = (inputVal * (9.0/5.0)) + 32.0;
     
     if (self.degControl.selectedSegmentIndex == 1){
-        pickedMetric = @"Fahrenheit";
-        invPickedMetric = @"Celcius";
         calVal = (inputVal - 32.0) * (5.0 / 9.0);
-        
     }
     
-    self.invDegLabel.text = invPickedMetric;
-    self.degLabel.text = pickedMetric;
+    self.invDegLabel.text = [degLbl objectAtIndex:self.degControl.selectedSegmentIndex];
+    self.degLabel.text = [degLbl objectAtIndex:fmod(self.degControl.selectedSegmentIndex + 1, 2)];
     
-    self.tempVal.text = [NSString stringWithFormat:@"%0.2f deg", calVal];
+    self.tempVal.text = [NSString stringWithFormat:@"%0.2f", calVal];
 }
 @end
