@@ -18,7 +18,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Temperature";
         
     }
     return self;
@@ -27,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Temperature";
     [self updateValues];
 }
 
@@ -63,6 +63,6 @@
     self.invDegLabel.text = [degLbl objectAtIndex:self.degControl.selectedSegmentIndex];
     self.degLabel.text = [degLbl objectAtIndex:fmod(self.degControl.selectedSegmentIndex + 1, 2)];
     
-    self.tempVal.text = [NSString stringWithFormat:@"%0.2f", calVal];
+    self.tempVal.text = [NSString stringWithFormat:@"%0.1f", calVal];
 }
 @end

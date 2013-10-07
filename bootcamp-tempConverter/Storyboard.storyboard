@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9E3-CC-0bU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Temp Converter Controller-->
+        <scene sceneID="xT6-VF-tfp">
+            <objects>
+                <viewController id="TzO-SZ-w70" customClass="TempConverterController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXV-GO-gl2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-KZ-qZq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="549" id="uCp-kI-BjM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resign:" destination="TzO-SZ-w70" eventType="touchUpInside" id="MrP-YK-RPp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TempValue" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUp-Ic-xiD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Lhe-eo-yxZ"/>
+                                    <constraint firstAttribute="width" constant="147" id="MHk-Ia-Dln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="InvertDegree" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFS-Wa-wHC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8x9-Lr-ot6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpz-W5-h6K">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="lvt-W0-ZC1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Degree" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTT-3o-74e">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="GwG-2t-zkM"/>
+                                    <constraint firstAttribute="height" constant="21" id="OMR-hv-gx9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="44M-UB-Rxp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="jof-NP-gYN"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Celcius"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onChange:" destination="TzO-SZ-w70" eventType="valueChanged" id="JGZ-UU-XjM"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="44M-UB-Rxp" firstAttribute="centerX" secondItem="cpJ-KZ-qZq" secondAttribute="centerX" type="default" id="3Pv-TT-6x9"/>
+                            <constraint firstItem="cpJ-KZ-qZq" firstAttribute="trailing" secondItem="lXV-GO-gl2" secondAttribute="trailing" type="default" id="7sf-s5-iOi"/>
+                            <constraint firstItem="qTT-3o-74e" firstAttribute="trailing" secondItem="eFS-Wa-wHC" secondAttribute="trailing" type="default" id="DDN-0P-bBr"/>
+                            <constraint firstItem="UUp-Ic-xiD" firstAttribute="leading" secondItem="lXV-GO-gl2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FZ8-sW-vXx"/>
+                            <constraint firstItem="cpJ-KZ-qZq" firstAttribute="top" secondItem="lXV-GO-gl2" secondAttribute="top" type="default" id="GJo-la-YqS"/>
+                            <constraint firstAttribute="trailing" secondItem="qTT-3o-74e" secondAttribute="trailing" constant="86" id="GRO-pQ-L2G"/>
+                            <constraint firstItem="vpz-W5-h6K" firstAttribute="top" secondItem="lXV-GO-gl2" secondAttribute="top" constant="20" symbolic="YES" type="default" id="KA3-qd-4i0"/>
+                            <constraint firstItem="eFS-Wa-wHC" firstAttribute="top" secondItem="lXV-GO-gl2" secondAttribute="top" constant="154" id="KI1-pl-WKB"/>
+                            <constraint firstItem="qTT-3o-74e" firstAttribute="top" secondItem="lXV-GO-gl2" secondAttribute="top" constant="23" id="O9r-q0-CWF"/>
+                            <constraint firstItem="vpz-W5-h6K" firstAttribute="leading" secondItem="lXV-GO-gl2" secondAttribute="leading" constant="62" id="Su7-Sj-88C"/>
+                            <constraint firstItem="UUp-Ic-xiD" firstAttribute="top" secondItem="lXV-GO-gl2" secondAttribute="top" constant="140" id="Wyj-T4-RBN"/>
+                            <constraint firstItem="44M-UB-Rxp" firstAttribute="top" secondItem="lXV-GO-gl2" secondAttribute="top" constant="79" id="nBt-ko-0zy"/>
+                            <constraint firstItem="qTT-3o-74e" firstAttribute="leading" secondItem="eFS-Wa-wHC" secondAttribute="leading" type="default" id="nyJ-dj-eT9"/>
+                            <constraint firstItem="cpJ-KZ-qZq" firstAttribute="leading" secondItem="lXV-GO-gl2" secondAttribute="leading" type="default" id="wdb-SP-hcU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qo5-gk-cCE"/>
+                    <connections>
+                        <outlet property="degControl" destination="44M-UB-Rxp" id="WcZ-Pc-7qd"/>
+                        <outlet property="degLabel" destination="qTT-3o-74e" id="AlD-Fh-gTQ"/>
+                        <outlet property="inputVal" destination="vpz-W5-h6K" id="HRM-1C-lQY"/>
+                        <outlet property="invDegLabel" destination="eFS-Wa-wHC" id="znV-ml-jSn"/>
+                        <outlet property="tempVal" destination="UUp-Ic-xiD" id="8Oy-1g-zSY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qa-CB-Qx3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="64"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jua-zF-rNb">
+            <objects>
+                <navigationController id="9E3-CC-0bU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nc-qy-JUD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TzO-SZ-w70" kind="relationship" relationship="rootViewController" id="VXm-Ol-K9c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXo-qo-qui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="64"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TempConverterController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TempConverterController.h"/>
+            <relationships>
+                <relationship kind="action" name="onChange:"/>
+                <relationship kind="action" name="resign:"/>
+                <relationship kind="outlet" name="degControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="degLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inputVal" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="invDegLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tempVal" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

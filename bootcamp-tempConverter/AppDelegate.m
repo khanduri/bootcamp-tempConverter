@@ -13,16 +13,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
     
-    TempConverterController * vc = [[TempConverterController alloc] init];
-    UINavigationController * navVC = [[UINavigationController alloc] initWithRootViewController:vc];
-    
-    
-    self.window.rootViewController = navVC;
+    //TempConverterController * vc = [[TempConverterController alloc] init];
+    //UINavigationController * navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    //self.window.rootViewController = navVC;
 
     return YES;
 }

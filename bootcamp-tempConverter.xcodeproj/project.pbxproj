@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019DC13618030A0E00C509CB /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019DC13518030A0E00C509CB /* Storyboard.storyboard */; };
 		01DCAAE217FD2B0900CEE810 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DCAAE117FD2B0900CEE810 /* UIKit.framework */; };
 		01DCAAE417FD2B0900CEE810 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DCAAE317FD2B0900CEE810 /* Foundation.framework */; };
 		01DCAAE617FD2B0900CEE810 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DCAAE517FD2B0900CEE810 /* CoreGraphics.framework */; };
@@ -17,10 +18,10 @@
 		01DCAAF617FD2B0900CEE810 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01DCAAF517FD2B0900CEE810 /* Default@2x.png */; };
 		01DCAAF817FD2B0900CEE810 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01DCAAF717FD2B0900CEE810 /* Default-568h@2x.png */; };
 		01DCAB0317FD2D0C00CEE810 /* TempConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DCAB0117FD2D0C00CEE810 /* TempConverterController.m */; };
-		01DCAB0417FD2D0C00CEE810 /* TempConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DCAB0217FD2D0C00CEE810 /* TempConverterController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019DC13518030A0E00C509CB /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		01DCAADE17FD2B0900CEE810 /* bootcamp-tempConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bootcamp-tempConverter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DCAAE117FD2B0900CEE810 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01DCAAE317FD2B0900CEE810 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,7 +37,6 @@
 		01DCAAF717FD2B0900CEE810 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		01DCAB0017FD2D0C00CEE810 /* TempConverterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempConverterController.h; sourceTree = "<group>"; };
 		01DCAB0117FD2D0C00CEE810 /* TempConverterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempConverterController.m; sourceTree = "<group>"; };
-		01DCAB0217FD2D0C00CEE810 /* TempConverterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempConverterController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +86,7 @@
 				01DCAAFF17FD2CE800CEE810 /* ViewController */,
 				01DCAAFE17FD2CDB00CEE810 /* AppDelegate */,
 				01DCAAE817FD2B0900CEE810 /* Supporting Files */,
+				019DC13518030A0E00C509CB /* Storyboard.storyboard */,
 			);
 			path = "bootcamp-tempConverter";
 			sourceTree = "<group>";
@@ -118,7 +119,6 @@
 			children = (
 				01DCAB0017FD2D0C00CEE810 /* TempConverterController.h */,
 				01DCAB0117FD2D0C00CEE810 /* TempConverterController.m */,
-				01DCAB0217FD2D0C00CEE810 /* TempConverterController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 				01DCAAF417FD2B0900CEE810 /* Default.png in Resources */,
 				01DCAAF617FD2B0900CEE810 /* Default@2x.png in Resources */,
 				01DCAAF817FD2B0900CEE810 /* Default-568h@2x.png in Resources */,
-				01DCAB0417FD2D0C00CEE810 /* TempConverterController.xib in Resources */,
+				019DC13618030A0E00C509CB /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +306,7 @@
 				01DCAAFD17FD2B0900CEE810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
